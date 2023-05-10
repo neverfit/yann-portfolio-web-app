@@ -33,9 +33,19 @@ body {
   @apply cursor-pointer hover:text-blue-500 hover:underline
   } 
   .herobtn {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40  hover:text-[#F7AB0A]/40
+    @apply px-6 py-2 border border-[#242424]/0 rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40  hover:text-[#F7AB0A]/40
     }
   .contactInput{
   @apply bg-slate-400/10 outline-none rounded-sm  px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all  focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A] 
   }
+}
+
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.animate-ping {
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
 }

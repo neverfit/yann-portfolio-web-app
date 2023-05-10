@@ -12,17 +12,17 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
-    {/*Header*/}
-    <section id="header" className='snap-center'>
-      <Header />
+    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0'>
+      {/*Header*/}
+      <section id="header" className='snap-center'>
+        <Header />
       </section>
 
       {/*Hero*/}
       <section id="hero" className='snap-center'>
-      <Hero />
+        <Hero />
       </section>
-      
+
       {/*About*/}
       <section id="about" className='snap-center'>
         <About />
@@ -35,17 +35,17 @@ export default function Home() {
 
       {/*Projects*/}
       <div id="projects" className='snap-center'>
-        <Projects/>
+        <Projects />
       </div>
 
       {/*Contact Me*/}
       <div id="contact" className='snap-start'>
-        <Contact/>
+        <Contact name={''} email={''} subject={''} message={''} />
 
       </div>
-      
-      
-    </>
+
+
+    </div>
   )
 }
 
