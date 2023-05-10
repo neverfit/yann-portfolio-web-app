@@ -12,8 +12,8 @@ export default function Hero() {
             <BackgroundCircles/>
 
             <img 
-            className='relative rounded-full h-32 w-32 object-cover'
-            src="https://images.pexels.com/photos/3525908/pexels-photo-3525908.jpeg?auto=compress&cs=tinysrgb&w=600" 
+            className='relative border-2 border-[#333333] rounded-full h-32 w-32 object-cover'
+            src="https://portfolio-yannpezavant.netlify.app/img/avatar2.png" 
             alt="porfile picture" />
 
             <div className='z-20'>

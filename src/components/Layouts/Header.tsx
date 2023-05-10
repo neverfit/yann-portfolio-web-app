@@ -37,6 +37,9 @@ export default function Header({ }: Props) {
                 <SocialIcon url="https://api.whatsapp.com/send?phone=33686337184"
                     fgColor='gray'
                     bgColor='transparent' />
+                <SocialIcon url="https://www.linkedin.com/in/yannpezavant/"
+                    fgColor='gray'
+                    bgColor='transparent' />
             </motion.div>
 
             
