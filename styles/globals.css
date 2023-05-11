@@ -28,6 +28,24 @@ body {
 }
 */
 
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.skill-slider .logo {
+  width: 30%;
+  margin: 0 auto 15px auto;
+  width: 10rem;
+}
+.skill-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+
 @layer components {
   .nav-link{
   @apply cursor-pointer hover:text-blue-500 hover:underline

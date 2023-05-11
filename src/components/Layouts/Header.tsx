@@ -75,6 +75,7 @@ export default function Header({ }: Props) {
 
             <Link href='#contact'>
             <div className='flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A] space-x-2'>
+                
                 <Envelope className="fill-gray-300 hover:fill-[#F7AB0A]"/>
 
                 <p className='uppercase hidden md:inline-flex text-sm'>Get in touch</p>

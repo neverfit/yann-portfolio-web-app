@@ -6,6 +6,7 @@ import About from '@/src/components/Layouts/About'
 import Skills from '@/src/components/Layouts/Skills'
 import Projects from '@/src/components/Layouts/Projects'
 import Contact from '@/src/components/Layouts/Contact'
+import Skills2 from '@/src/components/Layouts/Skills2'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,6 +33,10 @@ export default function Home() {
         <Skills />
       </section>
 
+      <section id="skills2" className='snap-start'>
+        <Skills2 />
+      </section>
+
       {/*Projects*/}
       <div id="projects" className='snap-center'>
         <Projects />
@@ -40,7 +45,6 @@ export default function Home() {
       {/*Contact Me*/}
       <div id="contact" className='snap-start'>
         <Contact/>
-
       </div>
 
 
