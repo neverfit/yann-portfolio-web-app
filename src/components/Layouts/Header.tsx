@@ -2,13 +2,16 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
+import { Envelope, Facebook, Github, Gitlab, Linkedin, Whatsapp } from '../Svg'
+
+
 
 
 type Props = {}
 
 export default function Header({ }: Props) {
     return (
-        <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
+        <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center cursor-pointer'>
             <motion.div 
             initial={{
                 x:-200,
@@ -22,39 +25,49 @@ export default function Header({ }: Props) {
                 x:0}}
             viewport={{once:true}}
 
-            className='flex'>
+            className='flex space-x-3'>
                 {/*social icons*/}
-                <SocialIcon url="https://github.com/neverfit"
-                    fgColor='gray'
-                    bgColor='transparent' />
+                <a href="https://github.com/neverfit?tab=repositories" target="_blank">
+                <Github 
+                className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                />
+                </a>
 
-                <SocialIcon url="https://gitlab.com/yannpezavant"
-                    fgColor='gray'
-                    bgColor='transparent' />
-                <SocialIcon url="https://www.facebook.com/profile.php?id=100010770961895"
-                    fgColor='gray'
-                    bgColor='transparent' />
-                <SocialIcon url="https://api.whatsapp.com/send?phone=33686337184"
-                    fgColor='gray'
-                    bgColor='transparent' />
-                <SocialIcon url="https://www.linkedin.com/in/yannpezavant/"
-                    fgColor='gray'
-                    bgColor='transparent' />
+                <a href="https://gitlab.com/yannpezavant" target="_blank">
+                <Gitlab 
+                className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                />
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=100010770961895" target="_blank">
+                <Facebook 
+                className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                />
+                </a>
+
+                <a href="https://api.whatsapp.com/send?phone=33686337184" target="_blank">
+                <Whatsapp 
+                className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                />
+                </a>
+
+                <a href="https://www.linkedin.com/in/yannpezavant/" target="_blank">
+                <Linkedin 
+                className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                />
+                </a>
+
+                
             </motion.div>
 
             
-            <div className='flex flex-row items-center text-gray-300 cursor-pointer'>
-                <SocialIcon
-                    className=' cursor-pointer'
-                    network='email'
-                    fgColor='gray'
-                    bgColor='transparent' 
-                    />
-
             <Link href='#contact'>
-                <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get in touch</p>
-            </Link>
+            <div className='flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A] space-x-2'>
+                <Envelope className="fill-gray-300 hover:fill-[#F7AB0A]"/>
+
+                <p className='uppercase hidden md:inline-flex text-sm'>Get in touch</p>
             </div>
+            </Link>
         </header>
     )
 }
