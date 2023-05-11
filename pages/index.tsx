@@ -33,10 +33,6 @@ export default function Home() {
         <Skills />
       </section>
 
-      <section id="skills2" className='snap-start'>
-        <Skills2 />
-      </section>
-
       {/*Projects*/}
       <div id="projects" className='snap-center'>
         <Projects />
