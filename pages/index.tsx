@@ -40,7 +40,7 @@ export default function Home() {
 
       {/*Contact Me*/}
       <div id="contact" className='snap-start'>
-        <Contact name={''} email={''} subject={''} message={''} />
+        <Contact/>
 
       </div>
 
