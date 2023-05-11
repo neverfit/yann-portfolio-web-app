@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Header from '@/src/components/Layouts/Header'
+import Footer from '@/src/components/Layouts/Footer'
 import Hero from '@/src/components/Layouts/Hero'
 import About from '@/src/components/Layouts/About'
 import Skills from '@/src/components/Layouts/Skills'

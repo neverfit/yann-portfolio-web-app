@@ -1,26 +1,9 @@
 import React from 'react'
 import { EnvelopeIcon, MapIcon, PhoneIcon } from "@heroicons/react/24/solid"
-import { useForm, SubmitHandler } from "react-hook-form";
-
-type Inputs = {
-    name: string,
-    email: string,
-    subject: string,
-    message: string
-}
 
 type Props = {}
 
-export default function Contact({ }: Inputs) {
-    const {
-        register,
-        handleSubmit,
-    } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = (formData) => {
-        window.location.href = `mailto:pezavantyann@gmail?subject=${formData.subject}&body=Hello, my name is ${formData.name}. ${formData.message} (${formData.email})`;
-    };
-
-
+export default function Contact({ }: Props) {
     return (
         <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
 
@@ -29,7 +12,7 @@ export default function Contact({ }: Inputs) {
             </h3>
 
             <div className='flex flex-col space-y-10'>
-                <h4 className='text-4xl font-semibold text-center'>I have got just what you need.
+                <h4 className='text-4xl font-semibold text-center'>I have got just what you need.  
                     <span className='underline decoration-[#F7AB0A]/50'>Leave me a message</span>
                 </h4>
 
@@ -48,34 +31,17 @@ export default function Contact({ }: Inputs) {
                     </div>
                 </div>
 
-                <form
-                    onSubmit={handleSubmit(onSubmit)}
-                    className='flex flex-col space-y-2  w-fit mx-auto'>
-
+                <form className='flex flex-col space-y-2  w-fit mx-auto'>
                     <div className='flex space-x-2'>
-                        <input {...register('name')}
-                            className='contactInput'
-                            type="text"
-                            placeholder='Name' />
-
-                        <input {...register('email')}
-                            className='contactInput'
-                            type="email"
-                            placeholder='Email' />
+                        <input className='contactInput' type="text" placeholder='Name' />
+                        <input className='contactInput' type="email" placeholder='Email'/>
                     </div>
 
-                    <input {...register('subject')}
-                        className='contactInput '
-                        type="text"
-                        placeholder='Subject' />
+                    <input className='contactInput ' type="text" placeholder='Subject'/>
 
-                    <textarea {...register('message')}
-                        className='contactInput'
-                        placeholder='Your message' />
+                    <textarea className='contactInput' placeholder='Your message'/>
 
-                    <button
-                        className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'
-                        type='submit'>Submit</button>
+                    <button className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg' type='submit'>Submit</button>
                 </form>
             </div>
         </div>
