@@ -26,7 +26,7 @@ export default function About() {
             opacity:1, 
             x:0}}
         viewport={{once:true}}
-        
+
         src="https://scontent.flyn1-1.fna.fbcdn.net/v/t1.6435-9/38772419_653147705054256_3539205248365101056_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=L49nHeUucIkAX_IlvI0&_nc_ht=scontent.flyn1-1.fna&oh=00_AfAJZM3U_xkgRUEnjdZlyIdxutJEIlWiQgEsCL9pLAae6A&oe=648313F9"
         className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:h-[600px] xl:w-[500px]'
         />
@@ -37,10 +37,12 @@ export default function About() {
               <span className='underline decoration-[#F7AB0A]/50'>little</span>{" "} 
               background
               </h4>
-              <p className='text-base'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis excepturi quod, assumenda tempora reiciendis necessitatibus, vel mollitia officia qui ullam accusamus dolore dignissimos dicta autem odit cumque voluptate possimus.
-                Molestias illum quasi ipsa accusamus voluptate at. Aperiam, dolores inventore placeat voluptates quidem amet facilis. Eos dolor minima corrupti voluptates quasi excepturi culpa beatae exercitationem, cumque hic sunt nesciunt qui.
-                Voluptate odit, quis, eligendi rerum corporis hic animi dolorum dignissimos nemo nisi nostrum quaerat. Architecto odit vel, et ea veniam maiores dignissimos ad libero corporis unde ipsa! Non, cupiditate sed.
+              <p className='text-lg tracking-[2px]'>
+                Wandering trotter and nature wonderer, I have long explored many remote places of our constantly stunning blue home.
+                Studies of English literature and civilization brought me to the point where I have had the opportunity to share my passion of foreign language with the world.
+                Eventually, I have found in computer programming a great place to explore and another opportunity to share passion, love and excitement.
+                Recently, the school of Simplon in Lyon, offered me the chance to learn web and mobile development.
+                As I intend to keep learning and some day become an accomplished wizard of the web I am actively looking for a 12 months apprenticeship from 18/09/23 to 21/03/25 !
               </p>
         </div>
     </motion.div>

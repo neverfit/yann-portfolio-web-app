@@ -60,7 +60,19 @@ export default function Header({ }: Props) {
                 
             </motion.div>
 
-            
+            <motion.div
+            initial={{
+                x:200,
+                opacity:0,
+            }}
+            transition={{
+                 duration:1.2,
+            }}
+            whileInView={{
+                opacity:1, 
+                x:0}}
+            viewport={{once:true}}>
+
             <Link href='#contact'>
             <div className='flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A] space-x-2'>
                 <Envelope className="fill-gray-300 hover:fill-[#F7AB0A]"/>
@@ -68,6 +80,7 @@ export default function Header({ }: Props) {
                 <p className='uppercase hidden md:inline-flex text-sm'>Get in touch</p>
             </div>
             </Link>
+            </motion.div>
         </header>
     )
 }
