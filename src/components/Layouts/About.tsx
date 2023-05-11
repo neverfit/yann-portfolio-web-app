@@ -26,6 +26,7 @@ export default function About() {
             opacity:1, 
             x:0}}
         viewport={{once:true}}
+        
         src="https://scontent.flyn1-1.fna.fbcdn.net/v/t1.6435-9/38772419_653147705054256_3539205248365101056_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=L49nHeUucIkAX_IlvI0&_nc_ht=scontent.flyn1-1.fna&oh=00_AfAJZM3U_xkgRUEnjdZlyIdxutJEIlWiQgEsCL9pLAae6A&oe=648313F9"
         className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:h-[600px] xl:w-[500px]'
         />

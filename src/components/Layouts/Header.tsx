@@ -50,7 +50,10 @@ export default function Header({ }: Props) {
                     fgColor='gray'
                     bgColor='transparent' 
                     />
+
+            <Link href='#contact'>
                 <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get in touch</p>
+            </Link>
             </div>
         </header>
     )
