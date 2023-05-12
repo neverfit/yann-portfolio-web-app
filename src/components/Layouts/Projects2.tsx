@@ -36,7 +36,6 @@ export default function Projects2({ }: Props) {
             navigation={{
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-                clickable: true,
               }}
             className="swiper_container "
 
