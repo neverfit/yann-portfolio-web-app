@@ -23,14 +23,14 @@ export default function Contact({ }: Props) {
 
 
     return (
-        <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
+        <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row  max-w-7xl px-10 justify-evenly mx-auto items-center'>
 
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
                 Contact
             </h3>
 
             <div className='flex flex-col space-y-10'>
-                <h4 className='text-4xl font-semibold text-center'>I have got just what you need. <span className='underline decoration-[#F7AB0A]/50'>Leave me a message</span>
+                <h4 className='text-4xl font-semibold text-center'>I have got just what you need. {""} <span className='underline decoration-[#F7AB0A]/50'>Leave me a message</span>
                 </h4>
 
                 <div className='space-y-10'>
@@ -54,7 +54,7 @@ export default function Contact({ }: Props) {
 
                 <form
                     onSubmit={handleSubmit(onSubmit)}
-                    className='flex flex-col space-y-2  w-fit mx-auto'>
+                    className='contact-form flex flex-col space-y-2 w-fit mx-auto'>
 
                     <div className='flex space-x-2'>
 
@@ -67,6 +67,7 @@ export default function Contact({ }: Props) {
                             className='contactInput'
                             type="email"
                             placeholder='Email' />
+
                     </div>
 
                     <input {...register('subject')}

@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
-import { SocialIcon } from 'react-social-icons'
 import { Envelope, Facebook, Github, Gitlab, Linkedin, Whatsapp } from '../Svg'
 
 

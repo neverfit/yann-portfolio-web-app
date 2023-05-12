@@ -54,7 +54,7 @@ body {
     @apply px-6 py-2 border border-[#242424]/0 rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40  hover:text-[#F7AB0A]/40
     }
   .contactInput{
-  @apply bg-slate-400/10 outline-none rounded-sm  px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all  focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A] 
+  @apply bg-slate-400/10 outline-none rounded-sm px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all  focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A] 
   }
 }
 
@@ -137,9 +137,8 @@ body {
 
 @media (max-width: 450px) {
   .slider-controler .swiper-button-next {
-    /* left: 80% !important;
-    transform: translateX(-80%) !important; */
-    display: none !important;
+    left: 80% !important;
+    transform: translateX(-80%) !important;
   }
 }
 
@@ -152,9 +151,14 @@ body {
 
 @media (max-width: 450px) {
   .slider-controler .swiper-button-prev {
-    /* left: 20% !important;
-    transform: translateX(-20%) !important; */
-    display: none !important;
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+  .swiper-slide img{
+    margin-left: -2rem
+  }
+  .contact-form{
+    max-width: 25rem !important;
   }
 }
 .slider-controler .slider-arrow {

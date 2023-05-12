@@ -10,7 +10,7 @@ export default function Skill({directionLeft}: Props) {
     <div className='group relative flex cursor-pointer'>
         <motion.img 
         initial={{
-            x: directionLeft?-200:200,
+            x: directionLeft ? -200 : 200,
             opacity: 0,
         }}
         transition={{duration:1}}
@@ -18,8 +18,7 @@ export default function Skill({directionLeft}: Props) {
         
         src='https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_96102ac6497377cd53da621075fe828e/sanity.png'
 
-        className='rounded-full border border-gray-500 object-cover w-24 h-24 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out md:h-28 md:w-28'
-        // 
+        className='rounded-full border border-gray-500 object-cover w-24 h-24 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out md:h-28 md:w-28' 
         
         />
         {/* <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-24 h-24 xl:w-32 xl:h-32 md:h-28 md:w-28 rounded-full z-0'>
