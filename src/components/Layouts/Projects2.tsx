@@ -7,6 +7,7 @@ import IonIcon from '@reacticons/ionicons';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 
 type Props = {}
@@ -41,28 +42,34 @@ export default function Projects2({ }: Props) {
 
             >
                 <SwiperSlide >
+                <Link href='https://projet-quiz.netlify.app/' target="_blank">
                     <img
                         src="https://portfolio-yannpezavant.netlify.app/img/capture_quiz.png" alt="" />
                     <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] py-5 text-[#F7AB0A]/70'>
                         Portfolio Project - HTML/CSS
                     </h4>
+                </Link>
 
                 </SwiperSlide>
 
                 <SwiperSlide >
+                <Link href='https://projet-jeu.netlify.app/' target="_blank">
                     <img
                         src="https://portfolio-yannpezavant.netlify.app/img/brickbreaker.png" alt="" />
                     <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] py-5 text-[#F7AB0A]/70'>
                         Game Project - HTML/CSS/TYPESCRIPT
                     </h4>
+                    </Link>
                 </SwiperSlide>
 
                 <SwiperSlide >
+                <Link href='https://gitlab.com/Hisami/mjc-simplon' target="_blank">
                     <img
                         src="https://portfolio-yannpezavant.netlify.app/img/Capture_diag-classes-mjc.PNG" alt="" />
                     <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] py-5 text-[#F7AB0A]/70'>
                         BackEnd Project - PHP/MYSQL
                     </h4>
+                    </Link>
                 </SwiperSlide>
 
 

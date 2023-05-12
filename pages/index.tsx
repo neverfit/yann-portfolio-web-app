@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Header from '@/src/components/Layouts/Header'
@@ -8,12 +9,13 @@ import Projects from '@/src/components/Layouts/Projects'
 import Contact from '@/src/components/Layouts/Contact'
 import Skills2 from '@/src/components/Layouts/Skills2'
 import Projects2 from '@/src/components/Layouts/Projects2'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0'>
+    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50'>
       {/*Header*/}
       <section id="header" className='snap-center'>
         <Header />
@@ -44,7 +46,21 @@ export default function Home() {
         <Contact/>
       </div>
 
-      {/*Projects2*/}
+      {/*Home*/}
+      <Link href='#hero'>
+        <footer className='sticky bottom-5 px-5 w-full cursor-pointer'>
+          <div className='flex flex-col items-start '>
+          <span className='text-[#F7AB0A]/50 hover:text-[#F7AB0A] cursor-pointer '>
+            <img
+              className='h-10 w-10  justify-center rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+              src="https://portfolio-yannpezavant.netlify.app/img/avatar2.png"
+              alt=""
+              />
+              Home</span> 
+              
+          </div>
+        </footer>
+      </Link >
       
 
 

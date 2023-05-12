@@ -17,7 +17,7 @@ export default function Hero() {
             alt="porfile picture" />
 
             <div className='z-20'>
-                <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px] '> Web Developer </h2>
+                <h2 className='text-sm uppercase text-[#F7AB0A]/40 pb-2 tracking-[15px] '> Web Developer </h2>
             
 
         <div className='pt-5'>
