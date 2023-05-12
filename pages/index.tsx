@@ -35,9 +35,9 @@ export default function Home() {
       </section>
 
       {/*Projects*/}
-      <div id="projects" className='snap-center'>
-        <Projects />
-      </div>
+      <section id="projects2" className='snap-center'>
+        <Projects2 />
+      </section>
 
       {/*Contact Me*/}
       <div id="contact" className='snap-start'>
@@ -45,9 +45,7 @@ export default function Home() {
       </div>
 
       {/*Projects2*/}
-      <section id="projects2" className='snap-center'>
-        <Projects2 />
-      </section>
+      
 
 
     </div>
