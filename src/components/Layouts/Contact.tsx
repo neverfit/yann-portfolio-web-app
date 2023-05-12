@@ -36,17 +36,17 @@ export default function Contact({ }: Props) {
                 <div className='space-y-10'>
 
                     <div className='flex items-center space-x-5 justify-center'>
-                        <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
+                        <PhoneIcon className='text-[#F7AB0A]/50 h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>+33686337184</p>
                     </div>
                     
                     <div className='flex items-center space-x-5 justify-center'>
-                        <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
+                        <EnvelopeIcon className='text-[#F7AB0A]/50 h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>pezavantyann@gmail.com</p>
                     </div>
 
                     <div className='flex items-center space-x-5 justify-center'>
-                        <MapIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
+                        <MapIcon className='text-[#F7AB0A]/50 h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>Tassin la Demi-lune</p>
                     </div>
 
@@ -79,7 +79,7 @@ export default function Contact({ }: Props) {
                         placeholder='Your message' />
 
                     <button
-                        className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'
+                        className='bg-[#F7AB0A]/50 hover:bg-[#F7AB0A]/80 py-5 px-10 rounded-md text-black font-bold text-lg'
                         type='submit'>
                         Submit
                     </button>
