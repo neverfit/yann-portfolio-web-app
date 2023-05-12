@@ -78,15 +78,64 @@ body {
 }
 
 .swiper_container {
-  height: 52rem;
+  height: 45rem;
   padding: 2rem 0;
   position: relative;
 }
 
-.swiper-slide {
-  width: 37rem;
+.swiper-slide{
+  width: 25rem;
   height: 42rem;
   position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 25rem;
+  height: 30rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.swiper-fade {
+  width: 25rem;
+  height: 30rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.swiper-fade::before {
+  content: "";
+  background: linear-gradient(180deg, rgba(247,171,10,1) 0%, rgba(247,171,10,0.768032212885154) 97%);
+  opacity: 0.85;
+  position: absolute;
+  width: 25rem;
+  height: 0;
+  transition: 0.4s ease-in-out;
+  border-radius: 1rem;
+}
+.swiper-fade:hover::before {
+  height: 30rem;
+  width: 25rem;
+  margin: 0 auto;
+  border: 1px solid blue;
+}
+.swiper-fade h4 {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 90%;
+}
+.swiper-fade:hover  h4 {
+  top: 30%;
+  opacity: 1;
+  color: black;
+  width: 90%;
 }
 
 @media (max-width: 500px) {
@@ -103,17 +152,18 @@ body {
     justify-content: center
   }
 }
-.swiper-slide img {
-  width: 30rem;
-  height: 35rem;
-  border-radius: 1rem;
-  object-fit: cover;
-  margin: 0 auto;
-  opacity: 0.8;
-}
+
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
   display: none;
+}
+
+.swiper-pagination > .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: #F7AB0A;
+}
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background-color: white;
 }
 
 .slider-controler {
@@ -128,6 +178,7 @@ body {
   left: 58% !important;
   transform: translateX(-58%) !important;
 }
+
 @media (max-width: 990px) {
   .slider-controler .swiper-button-next {
     left: 70% !important;
@@ -163,7 +214,6 @@ body {
 }
 .slider-controler .slider-arrow {
   background: var(--white);
-  width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
   left: 42%;

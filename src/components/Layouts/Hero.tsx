@@ -30,6 +30,9 @@ export default function Hero() {
             <Link href='#projects'>
             <button className='herobtn'>Projects</button>
             </Link>
+            <Link href='https://portfolio-yannpezavant.netlify.app/img/YannPezavantCV.pdf' target="_blank">
+            <button className='herobtn'>My CV</button>
+            </Link>
         </div>
         </div>
 
