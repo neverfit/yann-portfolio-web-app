@@ -10,14 +10,19 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 
 type Props = {}
 
 export default function Projects2({ }: Props) {
+    const router = useRouter();
+    const {locale}= router;
+
     return (
         <div className='container  p-16 mx-auto'>
-            <h1 className='heading p-4 top-24 uppercase tracking-[20px] text-gray-500 text-2xl text-center py-10'>Projects</h1>
+            <h1 className='heading p-4 top-24 uppercase tracking-[20px] text-gray-500 text-2xl text-center py-10'>
+            {locale== 'fr'? 'Projets' : 'Projects'}</h1>
 
 
             <Swiper
@@ -57,7 +62,8 @@ export default function Projects2({ }: Props) {
                         src="/img/portfolio.png" alt="" />
                         
                         <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] '>
-                            Portfolio Project - HTML/CSS
+                        {locale== 'fr'? 'Projet Portfolio-HTML/CSS' : 'Portfolio Project - HTML/CSS'}
+                            
                         </h4>
                     </div>
                 </Link>
@@ -77,7 +83,8 @@ export default function Projects2({ }: Props) {
                         src="/img/quiz.png" alt="" />
                         
                         <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px]  '>
-                            Quiz Project - HTML/CSS/Typecsript
+                        {locale== 'fr'? 'Projet Quiz-HTML/CSS/Typescript' : 'Quiz Project - HTML/CSS/Typescript'}
+                        
                         </h4>
                     </div>
                 </Link>
@@ -97,7 +104,7 @@ export default function Projects2({ }: Props) {
                         src="/img/jsgame.png" alt="" />
                         
                         <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] '>
-                            Game Project - HTML/CSS/TYPESCRIPT
+                        {locale== 'fr'? 'Projet Jeu-HTML/CSS' : 'Game Project - HTML/CSS/Typescript'}
                         </h4>
                     </div>
                     </Link>
@@ -117,7 +124,7 @@ export default function Projects2({ }: Props) {
                         src="/img/backendproject.png" alt="" />
                         
                         <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] '>
-                            BackEnd Project - PHP/MYSQL
+                        {locale== 'fr'? 'Projet BackEnd-PHP/MySQL' : 'BackEnd Project - PHP/MySQL'}
                         </h4>
                     </div>
                     </Link>
@@ -136,7 +143,8 @@ export default function Projects2({ }: Props) {
                         viewport={{ once: true }}
                         src="/img/freshcoffeeshop.png" alt="" />
                         <h4 className='text-2-xl font-semibold text-center uppercase tracking-[5px]'>
-                            Coffeeshop Website - Next.js/Tailwind/Framer
+                        {locale== 'fr'? 'Site vitrine-Next.js/Tailwind/Framer' : 'Coffeeshop Website - Next.js/Tailwind/Framer'}
+                            
                         </h4>
                     </div>
                     </Link>

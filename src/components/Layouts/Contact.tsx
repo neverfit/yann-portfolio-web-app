@@ -1,6 +1,7 @@
 import React from 'react'
 import { EnvelopeIcon, MapIcon, PhoneIcon } from "@heroicons/react/24/solid"
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useRouter } from 'next/router';
 
 type Inputs = {
     name: string,
@@ -12,6 +13,9 @@ type Inputs = {
 type Props = {}
 
 export default function Contact({ }: Props) {
+    const router = useRouter();
+    const {locale}= router;
+  
     const {
         register,
         handleSubmit
@@ -30,7 +34,11 @@ export default function Contact({ }: Props) {
             </h3>
 
             <div className='flex flex-col space-y-10'>
-                <h4 className='text-4xl font-semibold text-center mt-5 sm:m-1'>I have got just what you need. {""} <span className='underline decoration-[#F7AB0A]/50'>Leave me a message</span>
+                <h4 className='text-4xl font-semibold text-center mt-5 sm:m-1'>
+                {locale== 'fr'? 'J\'ai ce qu\'il vous faut.' : 'I\'ve got just what you need.'}
+                     {""} <span className='underline decoration-[#F7AB0A]/50'>
+                     {locale== 'fr'? 'Laissez moi un message' : 'Leave me a message.'}
+                        </span>
                 </h4>
 
                 <div className='space-y-10'>
@@ -82,7 +90,8 @@ export default function Contact({ }: Props) {
                     <button
                         className='bg-[#F7AB0A]/50 hover:bg-[#F7AB0A]/80 py-5 px-10 rounded-md text-black font-bold text-lg'
                         type='submit'>
-                        Submit
+                            {locale== 'fr'? 'Envoyer' : 'Submit.'}
+                        
                     </button>
                 </form>
             </div>

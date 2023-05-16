@@ -12,12 +12,16 @@ import Projects2 from '@/src/components/Layouts/Projects2'
 import Link from 'next/link'
 import Footer from '@/src/components/Layouts/Footer'
 import Circles from '@/src/components/Layouts/Circles'
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50'>
+
+
       {/*Header*/}
       <section id="header" className='snap-center'>
         <Header />
@@ -66,6 +70,7 @@ export default function Home() {
           </div>
         </footer>
       </Link >
+
 
       {/*Footer*/}
       <div id="footer" className='snap-start'>

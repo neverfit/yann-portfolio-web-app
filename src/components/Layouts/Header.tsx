@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { Envelope, Facebook, Github, Gitlab, Linkedin, Whatsapp } from '../Svg'
 import { Bars2Icon, Bars3Icon } from '@heroicons/react/24/solid'
+import LanguageSelectDropDown from './LanguageSelectDropDown'
+import { useRouter } from 'next/router'
 
 
 
@@ -12,10 +14,18 @@ type Props = {}
 export default function Header({ }: Props) {
     const [openDrawer, setOpenDrawer] = React.useState(false)
 
+    const router = useRouter();
+    const {locale} = router;
+    const currentLocale=locale=== 'en'? 'en' : 'fr';
+    const otherLocale=locale=== 'en'? 'fr' : 'en';
+    const [open, setOpen] = useState(false);
+
 
     return (
-        <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center cursor-pointer'>
-            <nav className='hidden lg:flex lg:flex-col justify-center space-y-4 '>
+        <header 
+        className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center cursor-pointer'>
+            <nav className='hidden lg:flex lg:flex-col justify-center space-y-4'>
+                
 
                 <motion.div
                     initial={{
@@ -63,6 +73,11 @@ export default function Header({ }: Props) {
                         />
                     </a>
 
+                    
+
+                    <LanguageSelectDropDown />
+                    
+
 
                 </motion.div>
             </nav>
@@ -72,6 +87,7 @@ export default function Header({ }: Props) {
                     onClick={() => setOpenDrawer(true)}
                     className='w-7 mx-1 hover:text-[#F7AB0A] text-gray-300 cursor-pointer lg:hidden pt-1'
                 />
+                
                 {openDrawer &&
                     <div
                         onClick={() => setOpenDrawer(false)}
@@ -88,7 +104,6 @@ export default function Header({ }: Props) {
 
                         <div
                             
-
                             className='flex flex-col space-y-3'>
                             {/*social icons*/}
                             <a 
@@ -128,6 +143,7 @@ export default function Header({ }: Props) {
                                     className="fill-gray-300 hover:fill-gray-500  w-5 h-5"
                                 />
                             </a>
+                            
                         </div>
                     </nav>
                 </div>
@@ -153,7 +169,7 @@ export default function Header({ }: Props) {
 
                         <Envelope className="fill-gray-300 hover:fill-[#F7AB0A]" />
 
-                        <p className='uppercase hidden md:inline-flex text-sm'>Get in touch</p>
+                        <p className='uppercase hidden md:inline-flex text-sm'>{locale== 'fr'? 'Me contacter' : 'Get in touch'}</p>
                     </div>
                 </Link>
             </motion.div>

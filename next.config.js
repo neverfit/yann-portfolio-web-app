@@ -3,6 +3,11 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  i18n:{
+    locales: ['fr', 'en'],
+    defaultLocale: 'en',
+  },
+
   webpack(config) {
     config.module.rules.push({
       test: /.svg$/i,
