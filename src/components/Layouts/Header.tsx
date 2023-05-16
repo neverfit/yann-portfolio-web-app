@@ -108,7 +108,7 @@ export default function Header({ }: Props) {
                             >
                                 <Github
                                     onClick={() => setOpenDrawer(false)}
-                                    className="fill-[#F7AB0A]/50 hover:fill-[#F7AB0A] w-5 h-5"
+                                    className="fill-[#F7AB0A] hover:fill-[#F7AB0A] w-5 h-5"
                                 />
                             </a>
 
