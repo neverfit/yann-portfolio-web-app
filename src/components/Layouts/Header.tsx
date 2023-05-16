@@ -81,7 +81,7 @@ export default function Header({ }: Props) {
                 }
 
                 <div
-                    className={`fixed z-50 w-[275px] h-screen left-0 top-0 bg-gray-800 dark:bg-black ease-in-out duration-500
+                    className={`fixed z-50 w-[75px] h-screen left-0 top-0 bg-gray-800 dark:bg-black ease-in-out duration-500
                 ${openDrawer ? 'translate-x-0' : '-translate-x-full'}`}>
 
                     <nav className='flex lg:flex-col justify-center space-y-4 py-6'>
@@ -100,7 +100,7 @@ export default function Header({ }: Props) {
                             }}
                             viewport={{ once: true }}
 
-                            className='flex space-x-3'>
+                            className='flex flex-col space-y-3'>
                             {/*social icons*/}
                             <a 
                             href="https://github.com/neverfit?tab=repositories" 
@@ -108,35 +108,35 @@ export default function Header({ }: Props) {
                             >
                                 <Github
                                     onClick={() => setOpenDrawer(false)}
-                                    className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                                    className="fill-[#F7AB0A]/50 hover:fill-[#F7AB0A] w-5 h-5"
                                 />
                             </a>
 
                             <a href="https://gitlab.com/yannpezavant" target="_blank">
                                 <Gitlab
                                     onClick={() => setOpenDrawer(false)}
-                                    className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                                    className="fill-[#F7AB0A]/50 hover:fill-[#F7AB0A] w-5 h-5"
                                 />
                             </a>
 
                             <a href="https://www.facebook.com/profile.php?id=100010770961895" target="_blank">
                                 <Facebook
                                     onClick={() => setOpenDrawer(false)}
-                                    className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                                    className="fill-[#F7AB0A]/50 hover:fill-[#F7AB0A] w-5 h-5"
                                 />
                             </a>
 
                             <a href="https://api.whatsapp.com/send?phone=33686337184" target="_blank">
                                 <Whatsapp
                                     onClick={() => setOpenDrawer(false)}
-                                    className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                                    className="fill-[#F7AB0A]/50 hover:fill-[#F7AB0A] w-5 h-5"
                                 />
                             </a>
 
                             <a href="https://www.linkedin.com/in/yannpezavant/" target="_blank">
                                 <Linkedin
                                     onClick={() => setOpenDrawer(false)}
-                                    className="fill-gray-300 hover:fill-[#F7AB0A] w-5 h-5"
+                                    className="fill-[#F7AB0A]/50 hover:fill-[#F7AB0A] w-5 h-5"
                                 />
                             </a>
                         </motion.div>
