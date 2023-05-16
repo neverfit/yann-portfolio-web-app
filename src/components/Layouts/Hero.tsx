@@ -16,7 +16,7 @@ export default function Hero() {
             src="https://portfolio-yannpezavant.netlify.app/img/avatar2.png" 
             alt="porfile picture" />
 
-            <div className='z-20'>
+            <div className='z-10'>
                 <h2 className='text-sm uppercase text-[#F7AB0A]/40 pb-2 tracking-[15px] '> Web Developer </h2>
             
 

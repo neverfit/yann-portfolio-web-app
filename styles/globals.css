@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-:root {
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -15,19 +15,16 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
-*/
-
+ 
 .skill-slider {
   width: 80%;
   margin: 0 auto;
@@ -55,6 +52,9 @@ body {
     }
   .contactInput{
   @apply bg-slate-400/10 outline-none rounded-sm px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all  focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A] 
+  }
+  .cursor{
+    @apply h-6 w-6 rounded-full bg-[#fff] absolute top-0 left-0 
   }
 }
 
@@ -88,6 +88,7 @@ body {
   height: 42rem;
   position: relative;
   overflow: hidden;
+  /* border: 1px solid blue; */
 }
 
 .swiper-slide img {
@@ -96,6 +97,7 @@ body {
   border-radius: 1rem;
   object-fit: cover;
   margin: 0 auto;
+  /* border: 1px solid blue; */
 }
 .swiper-fade {
   width: 25rem;
@@ -103,6 +105,7 @@ body {
   border-radius: 1rem;
   object-fit: cover;
   margin: 0 auto;
+  /* border: 1px solid black; */
 }
 
 .swiper-fade::before {
@@ -129,16 +132,17 @@ body {
   transform: translate(-50%, -50%);
   transition: 0.5s ease-in-out;
   opacity: 0;
-  width: 90%;
+  max-width: 70%;
+  /* border: 1px solid green; */
 }
-.swiper-fade:hover  h4 {
+.swiper-fade:hover h4 {
   top: 30%;
   opacity: 1;
   color: black;
   width: 90%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   .swiper_container {
     height: 47rem;
   }
@@ -168,7 +172,7 @@ body {
 
 .slider-controler {
   position: relative;
-  bottom: 2rem;
+  bottom: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,6 +228,11 @@ body {
 .slider-controler .slider-arrow::after {
   color: #F7AB0A;
 }
+
+
+/*Mouse Trailing*/
+
+
 
 
 

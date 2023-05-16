@@ -52,14 +52,14 @@ export default function Skills2({ }: Props) {
                     className="relative flex flex-shrink-0 w-full sm:w-auto">
                         <img 
                         className="logo object-cover object-center aspect-square dark:bg-gray-500" 
-                        src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" 
+                        src="/img/logosanity.png" 
                         alt="Image 1" />
                     </div>
                     <div 
                     className="logo relative flex flex-shrink-0 w-full sm:w-auto">
                         <img 
                         className="object-cover object-center aspect-square dark:bg-gray-500" 
-                        src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" 
+                        src="/img/logonext.png" 
                         alt="Image 2" />
                     </div>
                     <div 

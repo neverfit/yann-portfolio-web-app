@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 
 type Props = {}
@@ -44,17 +45,18 @@ export default function Projects2({ }: Props) {
             >
                 <SwiperSlide >
                 <Link href='https://projet-quiz.netlify.app/' target="_blank">
-                    <div className='swiper-fade border-indigo-500'>
-                        {/* <img
-                            src="https://portfolio-yannpezavant.netlify.app/img/capture_quiz.png" alt="" /> */}
-                        <Image
-                        src='/img/portfolio.png'
-                        alt='portfolio'
-                        width={380}
-                        height={519}
-                        className='rounded-xl border border-indigo-500'
-                        />
-                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] py-5 text-[#F7AB0A]/70'>
+                    <div className='swiper-fade '>
+                        <motion.img
+                        initial={{
+                            y: -300,
+                            opacity: 0
+                        }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.5 }}
+                        viewport={{ once: true }}
+                        src="/img/portfolio.png" alt="" />
+                        
+                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] '>
                             Portfolio Project - HTML/CSS
                         </h4>
                     </div>
@@ -63,17 +65,18 @@ export default function Projects2({ }: Props) {
 
                 <SwiperSlide >
                 <Link href='https://projet-quiz.netlify.app/' target="_blank">
-                    <div className='swiper-fade border-indigo-500'>
-                        {/* <img
-                            src="https://portfolio-yannpezavant.netlify.app/img/capture_quiz.png" alt="" /> */}
-                        <Image
-                        src='/img/quiz.png'
-                        alt='portfolio'
-                        width={380}
-                        height={519}
-                        className='rounded-xl border border-indigo-500'
-                        />
-                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] py-5 text-[#F7AB0A]/70'>
+                    <div className='swiper-fade '>
+                    <motion.img
+                        initial={{
+                            y: -300,
+                            opacity: 0
+                        }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.5 }}
+                        viewport={{ once: true }}
+                        src="/img/quiz.png" alt="" />
+                        
+                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px]  '>
                             Quiz Project - HTML/CSS/Typecsript
                         </h4>
                     </div>
@@ -83,16 +86,17 @@ export default function Projects2({ }: Props) {
                 <SwiperSlide >
                 <Link href='https://projet-jeu.netlify.app/' target="_blank">
                     <div className='swiper-fade'>
-                        {/* <img
-                            src="https://portfolio-yannpezavant.netlify.app/img/brickbreaker.png" alt="" /> */}
-                            <Image
-                        src='/img/jsgame.png'
-                        alt='js game'
-                        width={380}
-                        height={519}
-                        className='rounded-xl border border-indigo-500'
-                        />
-                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] py-5 text-[#F7AB0A]/70'>
+                    <motion.img
+                        initial={{
+                            y: -300,
+                            opacity: 0
+                        }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.5 }}
+                        viewport={{ once: true }}
+                        src="/img/jsgame.png" alt="" />
+                        
+                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] '>
                             Game Project - HTML/CSS/TYPESCRIPT
                         </h4>
                     </div>
@@ -102,16 +106,17 @@ export default function Projects2({ }: Props) {
                 <SwiperSlide >
                 <Link href='https://gitlab.com/Hisami/mjc-simplon' target="_blank">
                     <div className='swiper-fade'>
-                        {/* <img
-                            src="https://portfolio-yannpezavant.netlify.app/img/Capture_diag-classes-mjc.PNG" alt="" /> */}
-                            <Image
-                        src='/img/backendproject.png'
-                        alt='backend project'
-                        width={380}
-                        height={519}
-                        className='rounded-xl border border-indigo-500'
-                        />
-                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] py-5 text-[#F7AB0A]/70'>
+                    <motion.img
+                        initial={{
+                            y: -300,
+                            opacity: 0
+                        }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.5 }}
+                        viewport={{ once: true }}
+                        src="/img/backendproject.png" alt="" />
+                        
+                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] '>
                             BackEnd Project - PHP/MYSQL
                         </h4>
                     </div>
@@ -121,15 +126,17 @@ export default function Projects2({ }: Props) {
                 <SwiperSlide >
                 <Link href='https://freshcoffeeshop.netlify.app/' target="_blank">
                     <div className='swiper-fade'>
-                    <Image
-                        src='/img/freshcoffeeshop.png'
-                        alt='freshcoffeeshop'
-                        width={380}
-                        height={519}
-                        className='rounded-xl border border-indigo-500'
-                        />
-                        <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] py-5 text-[#F7AB0A]/70'>
-                            Coffeeshop Website - Next.js/Tailwind/FramerMotion
+                    <motion.img
+                        initial={{
+                            y: -300,
+                            opacity: 0
+                        }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.5 }}
+                        viewport={{ once: true }}
+                        src="/img/freshcoffeeshop.png" alt="" />
+                        <h4 className='text-2-xl font-semibold text-center uppercase tracking-[5px]'>
+                            Coffeeshop Website - Next.js/Tailwind/Framer
                         </h4>
                     </div>
                     </Link>
@@ -144,7 +151,7 @@ export default function Projects2({ }: Props) {
                         {/* <IonIcon name="arrow-forward-outline" /> */}
                     </div>
 
-                    <div className="swiper-pagination"></div>
+                    {/* <div className="swiper-pagination"></div> */}
                 </div>
 
             </Swiper>

@@ -10,6 +10,8 @@ import Contact from '@/src/components/Layouts/Contact'
 import Skills2 from '@/src/components/Layouts/Skills2'
 import Projects2 from '@/src/components/Layouts/Projects2'
 import Link from 'next/link'
+import Footer from '@/src/components/Layouts/Footer'
+import Circles from '@/src/components/Layouts/Circles'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,25 +45,40 @@ export default function Home() {
 
       {/*Contact Me*/}
       <div id="contact" className='snap-start'>
-        <Contact/>
+        <Contact />
       </div>
 
-      {/*Home*/}
-      <Link href='#hero'>
-        <footer className='sticky bottom-5 px-5 w-full cursor-pointer'>
+
+
+
+
+      {/*HomeLink*/}
+      <Link href='#header'>
+        <footer className='sticky bottom-2 px-2 w-full cursor-pointer'>
           <div className='flex flex-col items-start '>
-          <span className='text-[#F7AB0A]/50 hover:text-[#F7AB0A] cursor-pointer '>
-            <img
-              className='h-10 w-10  justify-center rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
-              src="https://portfolio-yannpezavant.netlify.app/img/avatar2.png"
-              alt=""
+            <span className='text-gray-500 hover:text-[#F7AB0A] cursor-pointer text-center '>
+              <img
+                className='h-10 w-10  justify-center rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+                src="/img/avatar2.png"
+                alt=""
               />
-              Home</span> 
-              
+              Up!</span>
           </div>
         </footer>
       </Link >
-      
+
+      {/*Footer*/}
+      <div id="footer" className='snap-start'>
+        <Footer />
+      </div>
+
+      {/*MouseTrail*/}
+      {/* <div id="circles" className='snap-start'>
+        <Circles />
+      </div> */}
+
+
+
 
 
     </div>
