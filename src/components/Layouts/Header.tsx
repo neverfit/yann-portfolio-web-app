@@ -84,21 +84,10 @@ export default function Header({ }: Props) {
                     className={`fixed z-50 w-[75px] h-screen left-0 top-0 bg-gray-800 dark:bg-black ease-in-out duration-500
                 ${openDrawer ? 'translate-x-0' : '-translate-x-full'}`}>
 
-                    <nav className='flex lg:flex-col justify-center space-y-4 py-6'>
+                    <nav className='flex lg:flex-col justify-center space-y-4 py-6 '>
 
-                        <motion.div
-                            initial={{
-                                x: -200,
-                                opacity: 0,
-                            }}
-                            transition={{
-                                duration: 1.2,
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                x: 0
-                            }}
-                            viewport={{ once: true }}
+                        <div
+                            
 
                             className='flex flex-col space-y-3'>
                             {/*social icons*/}
@@ -108,7 +97,7 @@ export default function Header({ }: Props) {
                             >
                                 <Github
                                     onClick={() => setOpenDrawer(false)}
-                                    className="fill-[#F7AB0A] hover:fill-[#F7AB0A] w-5 h-5"
+                                    className="fill-[#F7AB0A]/50 hover:fill-[#F7AB0A] w-5 h-5 "
                                 />
                             </a>
 
@@ -139,9 +128,8 @@ export default function Header({ }: Props) {
                                     className="fill-[#F7AB0A]/50 hover:fill-[#F7AB0A] w-5 h-5"
                                 />
                             </a>
-                        </motion.div>
+                        </div>
                     </nav>
-
                 </div>
 
             </>
