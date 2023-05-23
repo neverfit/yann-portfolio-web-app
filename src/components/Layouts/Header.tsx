@@ -83,7 +83,6 @@ export default function Header({ }: Props) {
             </nav>
 
             <>
-
                 <Bars3Icon
                     onClick={() => setOpenDrawer(true)}
                     className='w-7 mx-1 hover:text-[#F7AB0A] text-gray-300 cursor-pointer lg:hidden pt-1'
@@ -106,8 +105,7 @@ export default function Header({ }: Props) {
                         <div
                             
                             className='flex flex-col space-y-3'>
-                            
-
+                            {/*social icons*/}
                             <a 
                             href="https://github.com/neverfit?tab=repositories" 
                             target="_blank" 

@@ -29,12 +29,12 @@ export default function Contact({ }: Props) {
     return (
         <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row  max-w-7xl px-10 justify-evenly mx-auto items-center'>
 
-            <h3 className='absolute top-0 uppercase tracking-[20px] text-gray-500 text-2xl'>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
                 Contact
             </h3>
 
             <div className='flex flex-col space-y-10'>
-                <h4 className='text-2xl font-semibold text-center mt-5 '>
+                <h4 className='text-4xl font-semibold text-center mt-5 sm:m-1'>
                 {locale== 'fr'? 'J\'ai ce qu\'il vous faut.' : 'I\'ve got just what you need.'}
                      {""} <span className='underline decoration-[#F7AB0A]/50'>
                      {locale== 'fr'? 'Laissez moi un message' : 'Leave me a message.'}

@@ -20,7 +20,7 @@ export default function Projects2({ }: Props) {
     const {locale}= router;
 
     return (
-        <div className='container p-16 mx-auto'>
+        <div className='container  p-16 mx-auto'>
             <h1 className='heading p-4 top-24 uppercase tracking-[20px] text-gray-500 text-2xl text-center py-10'>
             {locale== 'fr'? 'Projets' : 'Projects'}</h1>
 
@@ -49,7 +49,7 @@ export default function Projects2({ }: Props) {
 
             >
                 <SwiperSlide >
-                <Link href='/portfolio' target="_blank">
+                <Link href='https://projet-quiz.netlify.app/' target="_blank">
                     <div className='swiper-fade '>
                         <motion.img
                         initial={{
