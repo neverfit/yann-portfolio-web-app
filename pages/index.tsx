@@ -1,22 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Header from '@/src/components/Layouts/Header'
-import Hero from '@/src/components/Layouts/Hero'
-import About from '@/src/components/Layouts/About'
-import Skills from '@/src/components/Layouts/Skills'
-import Projects from '@/src/components/Layouts/Projects'
-import Contact from '@/src/components/Layouts/Contact'
-import Skills2 from '@/src/components/Layouts/Skills2'
-import Projects2 from '@/src/components/Layouts/Projects2'
+import About from '@/src/components/About'
 import Link from 'next/link'
-import Footer from '@/src/components/Layouts/Footer'
-import Circles from '@/src/components/Layouts/Circles'
 import { useRouter } from 'next/router'
+import Header from '@/src/components/Header'
+import Hero from '@/src/components/Hero'
+import Skills from '@/src/components/Skills'
+import Projects2 from '@/src/components/Projects2'
+import Contact from '@/src/components/Contact'
+import Footer from '@/src/components/Footer'
+import { sanityClient } from '../sanity'
+import { log } from 'console'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+interface Props{
+  project:any
+}
+
+export default function Home({project}:Props) {
+  console.log(project)
 
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50'>
@@ -38,13 +42,13 @@ export default function Home() {
       </section>
 
       {/*Skills*/}
-      <section id="skills" className='snap-start'>
+      <section id="skills" className='snap-center'>
         <Skills />
       </section>
 
       {/*Projects*/}
       <section id="projects2" className='snap-center'>
-        <Projects2 />
+        <Projects2 project={project} />
       </section>
 
       {/*Contact Me*/}
@@ -62,7 +66,7 @@ export default function Home() {
           <div className='flex flex-col items-start '>
             <span className='text-gray-500 hover:text-[#F7AB0A] cursor-pointer text-center '>
               <img
-                className='h-10 w-10  justify-center rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+                className='h-10 w-10 justify-center rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
                 src="/img/avatar2.png"
                 alt=""
               />
@@ -80,14 +84,43 @@ export default function Home() {
       {/*MouseTrail*/}
       {/* <div id="circles" className='snap-start'>
         <Circles />
+      </div> */} 
+
+      {/* <div>{project.map((item: any) => (
+          <div key={item._id}>
+            {item.title}
+          </div>
+        ))}
       </div> */}
-
-
-
 
 
     </div>
   )
+}
+
+
+export const getServerSideProps = async () => {
+  const projectQuery= `*[_type == "project"] {
+    _id,
+    title,
+    description,
+    image,
+    _createdAt,
+}`
+
+const project = await sanityClient.fetch(projectQuery)
+
+if(!project){
+  return {
+      notFound: true
+  }
+}
+
+return {
+ props: {
+  project,
+},
+}
 }
 
 

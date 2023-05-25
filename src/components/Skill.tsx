@@ -18,7 +18,7 @@ export default function Skill({directionLeft}: Props) {
         
         src='/img/logosanity.webp'
 
-        className='rounded-full border border-gray-500 object-cover w-24 h-24 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out md:h-28 md:w-28' 
+        className='rounded-full border border-gray-500 object-cover w-20 h-20 xl:w-24 xl:h-24 filter group-hover:grayscale transition duration-300 ease-in-out md:h-20 md:w-20 ' 
         
         />
         {/* <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-24 h-24 xl:w-32 xl:h-32 md:h-28 md:w-28 rounded-full z-0'>

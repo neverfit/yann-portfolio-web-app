@@ -18,22 +18,22 @@ export default function LanguageSelectDropDown(){
         <div className="relative ">
             <div
             onClick={() => setOpen(true)}
-            className="flex items-center space-x-2 rounded-xl cursor-pointer hover:underline ml-10"
+            className="flex items-center space-x-2 rounded-xl cursor-pointer hover:underline "
             >
                 <ReactCountryFlag
                 countryCode={currentLocale === 'en' ? 'us' : currentLocale}
                 svg
                 style={{
-                    width: "1.25rem",
-                    height: "1.25rem"
+                    width: "1rem",
+                    height: "1rem"
                 }}
                 title={currentLocale}
                 className="rounded-full "
 
                 />
-                <span className="info-label w-5 h-5 items-center justify-center flex">{currentLocale}</span>
+                {/* <span className="info-label w-5 h-5 items-center justify-center flex">{currentLocale}</span> */}
 
-                <ChevronDownIcon className="w-3" />
+                {/* <ChevronDownIcon className="w-3" /> */}
             </div>
 
             {open &&
@@ -52,20 +52,20 @@ export default function LanguageSelectDropDown(){
                     setOpen(false)
                     if (setOpen != null) setOpen(false)
                 }}
-                className="absolute -bottom-9 z-10 items-center space-x-2  rounded-xl cursor-pointer ml-10"
+                className="absolute -bottom-10 z-10 items-center space-x-2 rounded-xl cursor-pointer grayscale hover:grayscale-0"
                 >
                     <ReactCountryFlag
                     countryCode={otherLocale === 'en' ? 'us' : otherLocale}
                     svg
                     style={{
-                        width: "1.25rem",
-                        height: "1.25rem"
+                        width: "1rem",
+                        height: "1rem"
                     }}
                     title={otherLocale}
                     className="rounded-full"
 
                     />
-                    <span className="info-label w-5 h-5 ">{otherLocale}</span>
+                    {/* <span className="info-label w-5 h-5 ">{otherLocale}</span> */}
 
                     <ChevronDownIcon className="w-3 opacity-0" />
 

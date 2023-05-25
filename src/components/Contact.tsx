@@ -27,35 +27,35 @@ export default function Contact({ }: Props) {
 
 
     return (
-        <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row  max-w-7xl px-10 justify-evenly mx-auto items-center'>
+        <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row  px-10 justify-evenly mx-auto items-center'>
 
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+            <h3 className='absolute top-0 uppercase tracking-[20px] text-gray-500 mt-10'>
                 Contact
             </h3>
 
             <div className='flex flex-col space-y-10'>
-                <h4 className='text-4xl font-semibold text-center mt-5 sm:m-1'>
+                <h4 className='text-lg font-semibold text-center'>
                 {locale== 'fr'? 'J\'ai ce qu\'il vous faut.' : 'I\'ve got just what you need.'}
                      {""} <span className='underline decoration-[#F7AB0A]/50'>
                      {locale== 'fr'? 'Laissez moi un message' : 'Leave me a message.'}
                         </span>
                 </h4>
 
-                <div className='space-y-10'>
+                <div >
 
-                    <div className='flex items-center space-x-5 justify-center'>
-                        <PhoneIcon className='text-[#F7AB0A]/50 h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>+33686337184</p>
+                    <div className='flex items-center space-x-5 justify-center py-2'>
+                        <PhoneIcon className='text-[#F7AB0A]/50 h-5 w-5 animate-pulse' />
+                        <p className='text-lg '>+33686337184</p>
                     </div>
                     
-                    <div className='flex items-center space-x-5 justify-center'>
-                        <EnvelopeIcon className='text-[#F7AB0A]/50 h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>pezavantyann@gmail.com</p>
+                    <div className='flex items-center space-x-5 justify-center py-2'>
+                        <EnvelopeIcon className='text-[#F7AB0A]/50 h-5 w-5 animate-pulse' />
+                        <p className='text-lg'>pezavantyann@gmail.com</p>
                     </div>
 
-                    <div className='flex items-center space-x-5 justify-center'>
-                        <MapIcon className='text-[#F7AB0A]/50 h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>Tassin la Demi-lune</p>
+                    <div className='flex items-center space-x-5 justify-center py-2'>
+                        <MapIcon className='text-[#F7AB0A]/50 h-5 w-5 animate-pulse' />
+                        <p className='text-lg'>Tassin la Demi-lune</p>
                     </div>
 
                 </div>
