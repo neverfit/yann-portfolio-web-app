@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { Envelope, Facebook, Github, Gitlab, Linkedin, Whatsapp } from '../Svg'
-import { Bars2Icon, Bars3Icon } from '@heroicons/react/24/solid'
+import { Bars3Icon } from '@heroicons/react/24/solid'
 import LanguageSelectDropDown from './LanguageSelectDropDown'
 import { useRouter } from 'next/router'
 

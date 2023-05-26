@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { sanityClient, urlFor } from '@/sanity';
+import { GetStaticProps } from 'next';
 
 
 interface Props {
@@ -54,7 +55,7 @@ export default function Projects2({ project}: Props) {
 
 
                         <SwiperSlide >
-                            <Link href={`/portfolio/${item?.slug?.current}`} target="_blank">
+                            <Link href={`/projects/${item?.slug?.current}`} target='_blank'>
                                 <div className='swiper-fade '>
                                     <motion.img
                                         initial={{
@@ -102,35 +103,95 @@ export default function Projects2({ project}: Props) {
 
 
 
-export const getServerSideProps = async () => {
-    const projectQuery= `*[_type == "project"] {
-      _id,
-      title,
-      titre,
-      description,
-      contenu,
-      image,
-      link,
-      _createdAt,
-      slug {
-        current
-    }
-  }`
+// export const getServerSideProps = async () => {
+//     const projectQuery= `*[_type == "project"] {
+//       _id,
+//       title,
+//       titre,
+//       description,
+//       contenu,
+//       image,
+//       link,
+//       _createdAt,
+//       slug {
+//         current
+//     }
+//   }`
   
-  const project = await sanityClient.fetch(projectQuery)
+//   const project = await sanityClient.fetch(projectQuery)
   
-  if(!project){
+//   if(!project){
+//     return {
+//         notFound: true
+//     }
+//   }
+  
+//   return {
+//     props: {
+//       project,
+//     }
+//   }
+// }
+
+export async function getStaticPaths({ locales }: any) {
+    const query = `*[_type == "project"]{
+              _id,
+              slug {
+                  current
+              }
+          }` ;
+  
+    const projects = await sanityClient.fetch(query);
+  
+    const paths = projects
+      .map((project: any) =>
+        locales.map((locale: any) => ({
+          params: { slug: project.slug.current},
+          locale, //locale should not be inside params
+        }))
+      )
+      .flat();
+  
     return {
-        notFound: true
-    }
+      paths,
+      fallback: true,
+    };
   }
+
+
   
-  return {
-    props: {
-      project,
+  export const getStaticProps: GetStaticProps = async ({ params }: any) => {
+    const projectQuery = `*[_type == "project" &&  slug.current == $slug ][0]] {
+        _id,
+        title,
+        titre,
+        description,
+        contenu,
+        image,
+        link,
+        _createdAt,
+        slug {
+          current
+        }
+    }`;
+  
+    const project = await sanityClient.fetch(projectQuery, {
+      slug: params?.slug,
+    });
+  
+    if (!project) {
+      return {
+        notFound: true,
+      };
     }
-  }
-}
+  
+    return {
+      props: {
+        project,
+      },
+      revalidate: 10,
+    };
+  };
 
 
 
