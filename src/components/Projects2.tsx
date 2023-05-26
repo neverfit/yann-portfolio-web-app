@@ -2,7 +2,6 @@
 import React from 'react'
 import { EffectCoverflow, Navigation, Pagination } from 'swiper';
 import { SwiperSlide, Swiper } from 'swiper/react';
-import IonIcon from '@reacticons/ionicons';
 import Image from 'next/image';
 
 import 'swiper/css';
@@ -18,13 +17,13 @@ interface Props {
     project: any;
 }
 
-export default function Projects2({ project }: Props) {
+export default function Projects2({ project}: Props) {
     const router = useRouter();
     const { locale } = router;
 
     return (
-        <div className='container p-16 mx-auto'>
-            <h1 className='p-4 top-24 uppercase tracking-[20px] text-gray-500 text-center py-10'>
+        <div className='container h-screen p-16 mx-auto '>
+            <h1 className=' mb-10 top-12 uppercase tracking-[20px] text-gray-500 text-center '>
                 {locale == 'fr' ? 'Projets' : 'Projects'}</h1>
 
 
@@ -55,7 +54,7 @@ export default function Projects2({ project }: Props) {
 
 
                         <SwiperSlide >
-                            <Link href="/portfolio" target="_blank">
+                            <Link href={`/portfolio/${item?.slug?.current}`} target="_blank">
                                 <div className='swiper-fade '>
                                     <motion.img
                                         initial={{
@@ -65,20 +64,15 @@ export default function Projects2({ project }: Props) {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 1.5 }}
                                         viewport={{ once: true }}
-                                        src={urlFor(item.image).url()} alt="img" />
+                                        src={urlFor(item?.image).url()} alt={item.title}/>
 
                                     <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] '>
-                                        {locale == 'fr' ? 'Clickez moi pour en savoir plus !' : 'Click me to know more !'}
+                                        {locale == 'fr' ? item.titre : item.title}
 
                                     </h4>
                                 </div>
                             </Link>
                         </SwiperSlide>
-
-
-
-
-
                     </div>
                     
 
@@ -108,27 +102,41 @@ export default function Projects2({ project }: Props) {
 
 
 
-// export const getServerSideProps = async () => {
-//     const projectQuery = `*[_type == "project"] {
-//       _id,
-//       title,
-//       description,
-//       date,
-//       image,
-//       _createdAt,
-//   }`
+export const getServerSideProps = async () => {
+    const projectQuery= `*[_type == "project"] {
+      _id,
+      title,
+      titre,
+      description,
+      contenu,
+      image,
+      link,
+      _createdAt,
+      slug {
+        current
+    }
+  }`
   
-//     const project = await sanityClient.fetch(projectQuery)
+  const project = await sanityClient.fetch(projectQuery)
   
-//     if (!project) {
-//       return {
-//         notFound: true
-//       }
-//     }
+  if(!project){
+    return {
+        notFound: true
+    }
+  }
   
-//     return {
-//       props: {
-//         project,
-//       },
-//     }
-//   }
+  return {
+    props: {
+      project,
+    }
+  }
+}
+
+
+
+
+
+
+
+
+  

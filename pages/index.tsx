@@ -12,6 +12,7 @@ import Contact from '@/src/components/Contact'
 import Footer from '@/src/components/Footer'
 import { sanityClient } from '../sanity'
 import { log } from 'console'
+import { GetStaticProps } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,7 +48,7 @@ export default function Home({project}:Props) {
       </section>
 
       {/*Projects*/}
-      <section id="projects2" className='snap-center'>
+      <section id="projects2" className='snap-start'>
         <Projects2 project={project} />
       </section>
 
@@ -103,9 +104,15 @@ export const getServerSideProps = async () => {
   const projectQuery= `*[_type == "project"] {
     _id,
     title,
+    titre,
+    contenu,
     description,
     image,
+    link,
     _createdAt,
+    slug {
+      current
+  }
 }`
 
 const project = await sanityClient.fetch(projectQuery)
@@ -117,11 +124,14 @@ if(!project){
 }
 
 return {
- props: {
-  project,
-},
+  props: {
+    project,
+  }
 }
 }
+
+
+
 
 
 

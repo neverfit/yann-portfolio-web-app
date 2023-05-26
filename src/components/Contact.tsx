@@ -29,7 +29,7 @@ export default function Contact({ }: Props) {
     return (
         <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row  px-10 justify-evenly mx-auto items-center'>
 
-            <h3 className='absolute top-0 uppercase tracking-[20px] text-gray-500 mt-10'>
+            <h3 className='absolute top-12 uppercase tracking-[20px] text-gray-500 '>
                 Contact
             </h3>
 
