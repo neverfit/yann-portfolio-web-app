@@ -41,7 +41,7 @@ export default function Header({ }: Props) {
                     }}
                     viewport={{ once: true }}
 
-                    className='flex space-x-3 border'>
+                    className='flex space-x-3'>
                     {/*social icons*/}
                     <a href="https://github.com/neverfit?tab=repositories" target="_blank">
                         <Github
