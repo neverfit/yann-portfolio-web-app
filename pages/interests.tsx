@@ -19,42 +19,58 @@ function Interests({series}:Props) {
     //     ))}
     //   </div> 
     // <div
-
+    <>
+    <div>
+      My favourite series
+      </div>
+    
     <div
-    className='grid grid-cols-5 gap-4 
-    // bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50'
+    className='grid lg:grid-cols-5 gap-4 md:grid-cols-3 sm:grid-cols-2 
+    // bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50 p-10 content-between'
     >
     
 
-      {series.map((item: any) => (
+      {series?.map((item: any) => (
         <div
+        className=' rounded shadow-md shadow-[#F7AB0A] '
         
-        key={item._id}
+        key={item?._id}
         >
 
 
-          <img className="w-full " src={urlFor(item.image).url()} alt="img" />
+          <img className="w-full " src={urlFor(item?.image).url()} alt="img" />
 
-          <div className="px-6 py-4">
-            <div className="text-sm tracking-[3px] mb-2 uppercase text-[#F7AB0A]/40">{item.title}</div>
+          <div
+          className='flex flex-col ' 
+          >
+
+          <div className="px-6 py-4 border border-indigo-500">
+            <div className="text-sm tracking-[3px] mb-2 uppercase text-[#F7AB0A]/40">{item?.title}</div>
             <p className=" text-sm text-gray-500">
 
-              {item.description}
+              {item?.description}
 
             </p>
           </div>
-          <div className="px-6 pt-4 pb-2">
+
+          <div className="px-6 pt-4 pb-2 border border-yellow-500 ">
             <span className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 
-            mb-2">#HTML</span>
+            mb-2 ">#HTML</span>
             <span className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 
             mb-2">#CSS</span>
             <span className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">#Typescript</span>
           </div>
+          </div>
+
+
 
         </div>
       ))}
       
     </div>
+    
+    </>
+
 
 
 

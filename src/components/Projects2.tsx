@@ -50,8 +50,8 @@ export default function Projects2({ project}: Props) {
                 }}
                 className="swiper_container ">
 
-                {project.map((item: any) => (
-                    <div key={item._id}>
+                {project?.map((item: any) => (
+                    <div key={item?._id}>
 
 
                         <SwiperSlide >
@@ -65,10 +65,10 @@ export default function Projects2({ project}: Props) {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 1.5 }}
                                         viewport={{ once: true }}
-                                        src={urlFor(item?.image).url()} alt={item.title}/>
+                                        src={urlFor(item?.image).url()} alt={item?.title}/>
 
                                     <h4 className='text-4-xl font-semibold text-center uppercase tracking-[5px] '>
-                                        {locale == 'fr' ? item.titre : item.title}
+                                        {locale == 'fr' ? item?.titre : item?.title}
 
                                     </h4>
                                 </div>
