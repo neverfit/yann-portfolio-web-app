@@ -32,19 +32,22 @@ export default function Project ({project}: Props){
         viewport={{once: true}}
         className="max-w-sm rounded overflow-hidden shadow-md shadow-[#F7AB0A]">
 
-              <img className="w-full" src={urlFor(project?.image).url()} alt={project.title} />
+        {project?.image && 
+              <img className="w-full" src={urlFor(project?.image).url()} alt={project?.title} />
+        }
 
               <div
                 className="px-6 py-4">
                   <div
                   className="text-sm tracking-[3px] mb-2 uppercase text-[#F7AB0A]/40">
-                    {locale == 'fr' ? project.titre : project.title}
+                    {locale == 'fr' ? project?.titre : project?.title}
                   </div>
                   <p
                   className="text-sm text-gray-500"
-                  >{locale == 'fr' ? project.contenu : project.description}
+                  >{locale == 'fr' ? project?.contenu : project?.description}
                   </p>
               </div>
+
 
 
 
