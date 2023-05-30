@@ -12,11 +12,11 @@ export default function Hero() {
 
         <div 
 
-        className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden '>
+        className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
             <BackgroundCircles/>
 
             <img 
-            className='relative border-2 border-[#333333] rounded-full h-32 w-32 object-cover'
+            className='relative border-2 border-[#333333] rounded-full h-28 w-28 object-cover'
             src="https://portfolio-yannpezavant.netlify.app/img/avatar2.png" 
             alt="porfile picture" />
 
@@ -36,6 +36,9 @@ export default function Hero() {
             </Link>
             <Link href='https://portfolio-yannpezavant.netlify.app/img/YannPezavantCV.pdf' target="_blank">
             <button className='herobtn'>{locale== 'fr'? 'Mon CV' : 'My CV'}</button>
+            </Link>
+            <Link href='/interests'>
+            <button className='herobtn'>{locale== 'fr'? 'Intérêts' : 'Interests'}</button>
             </Link>
         </div>
         </div>

@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image'
+
 import { Inter } from 'next/font/google'
 import About from '@/src/components/About'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import Header from '@/src/components/Header'
 import Hero from '@/src/components/Hero'
 import Skills from '@/src/components/Skills'
@@ -11,13 +10,11 @@ import Projects2 from '@/src/components/Projects2'
 import Contact from '@/src/components/Contact'
 import Footer from '@/src/components/Footer'
 import { sanityClient } from '../sanity'
-import { log } from 'console'
-import { GetStaticProps } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 
 interface Props{
-  project:any
+  project:any,
 }
 
 export default function Home({project}:Props) {
@@ -65,9 +62,9 @@ export default function Home({project}:Props) {
       <Link href='#header'>
         <footer className='sticky bottom-2 px-2 w-full cursor-pointer'>
           <div className='flex flex-col items-start '>
-            <span className='text-gray-500 hover:text-[#F7AB0A] cursor-pointer text-center '>
+            <span className='text-gray-500 hover:text-[#F7AB0A] cursor-pointer text-center text-sm'>
               <img
-                className='h-10 w-10 justify-center rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+                className='h-6 w-6 justify-center rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
                 src="/img/avatar2.png"
                 alt=""
               />

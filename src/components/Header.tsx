@@ -23,8 +23,8 @@ export default function Header({ }: Props) {
 
     return (
         <header
-            className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center cursor-pointer'>
-            <nav className='hidden lg:flex lg:flex-col justify-center space-y-4'>
+            className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center cursor-pointer '>
+            <nav className='hidden lg:flex lg:flex-col justify-center space-y-4 border'>
 
 
                 <motion.div
@@ -41,7 +41,7 @@ export default function Header({ }: Props) {
                     }}
                     viewport={{ once: true }}
 
-                    className='flex space-x-3'>
+                    className='flex space-x-3 border'>
                     {/*social icons*/}
                     <a href="https://github.com/neverfit?tab=repositories" target="_blank">
                         <Github

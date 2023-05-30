@@ -12,7 +12,7 @@ export default function Project ({project}: Props){
   console.log(project)
 
   const router = useRouter();
-    const { locale } = router;
+  const { locale } = router;
 
   
   return(
@@ -50,16 +50,16 @@ export default function Project ({project}: Props){
 
                 
               <div
-                className="pxx-6 pt-4 pb-2"
+                className="px-6 pt-4 pb-2"
                 >
                   <span
-                  className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 ml-2">HTML
+                  className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 ">HTML
                   </span>
                   <span
-                  className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 ml-2">CSS
+                  className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 ">CSS
                   </span>
                   <span
-                  className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 ml-2">Typescript
+                  className="inline-block bg-[#F7AB0A] rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 ">Typescript
                   </span>
 
               </div>

@@ -15,7 +15,7 @@ export default function LanguageSelectDropDown(){
     
     
     return(
-        <div className="relative ">
+        <div className="relative">
             <div
             onClick={() => setOpen(true)}
             className="flex items-center space-x-2 rounded-xl cursor-pointer hover:underline "

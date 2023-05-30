@@ -78,7 +78,7 @@ export default function Projects2({ project}: Props) {
                     
 
                 ))}
-                        <div className="slider-controler ">
+                        <div className="slider-controler">
                             <div className="swiper-button-prev slider-arrow">
                                 {/* <IonIcon name="arrow-back-outline" /> */}
                             </div>

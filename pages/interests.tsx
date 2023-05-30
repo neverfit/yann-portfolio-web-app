@@ -4,12 +4,12 @@ import React from 'react'
 import { sanityClient, urlFor } from '../sanity'
 import { motion } from 'framer-motion';
 
-interface Props {
-  project: any;
+interface Props{
+  series:any;
 }
 
-function portfolio({ project }: Props) {
-  console.log(project)
+function Interests({series}:Props) {
+  console.log(series)
 
   return (
     // <div>{project.map((item: any) => (
@@ -20,22 +20,20 @@ function portfolio({ project }: Props) {
     //   </div> 
     // <div
 
-    <motion.div
-      initial={{
-        opacity: 0
-      }}
-      animate={{ height: [50, 400], width: [50, 340] }}
-      transition={{ ease: "easeOut", duration: 2 }}
-      whileInView={{ opacity: 1, y: 0 }}
+    <div
+    className='grid grid-cols-5 gap-4 
+    // bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50'
+    >
+    
 
-      viewport={{ once: true }}
-      className="max-w-sm rounded overflow-hidden shadow-md shadow-[#F7AB0A] ">
-
-      <div>{project.map((item: any) => (
-        <div key={item._id}>
+      {series.map((item: any) => (
+        <div
+        
+        key={item._id}
+        >
 
 
-          <img className="w-full" src={urlFor(item.image).url()} alt="img" />
+          <img className="w-full " src={urlFor(item.image).url()} alt="img" />
 
           <div className="px-6 py-4">
             <div className="text-sm tracking-[3px] mb-2 uppercase text-[#F7AB0A]/40">{item.title}</div>
@@ -55,13 +53,8 @@ function portfolio({ project }: Props) {
 
         </div>
       ))}
-      </div>
-    </motion.div>
-
-
-
-
-
+      
+    </div>
 
 
 
@@ -130,25 +123,24 @@ function portfolio({ project }: Props) {
   )
 }
 
-export default portfolio
+export default Interests
 
 
 export const getServerSideProps = async () => {
-  const projectQuery = `*[_type == "project"] {
+  const projectQuery = `*[_type == "serie"] {
     _id,
     title,
+    titre,
     description,
+    contenu,
     image,
     link,
     _createdAt,
-    slug {
-      current
-  }
 }`
 
-  const project = await sanityClient.fetch(projectQuery)
+  const series = await sanityClient.fetch(projectQuery)
 
-  if (!project) {
+  if (!series) {
     return {
       notFound: true
     }
@@ -156,10 +148,11 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      project,
+      series,
     },
   }
 }
+
 
 
 

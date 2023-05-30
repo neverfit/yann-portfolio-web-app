@@ -43,12 +43,9 @@ body {
   margin-top: -60px;
 } */
 
-@layer components {
-  .nav-link{
-  @apply cursor-pointer hover:text-blue-500 hover:underline
-  } 
+@layer components { 
   .herobtn {
-    @apply px-6 py-2 border border-[#242424]/0 rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40  hover:text-[#F7AB0A]/40
+    @apply px-6 py-2 border border-[#242424]/0 rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40
     }
   .contactInput{
   @apply bg-slate-400/10 outline-none rounded-sm px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all  focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A] 
@@ -93,16 +90,16 @@ body {
 }
 
 .swiper-slide img {
-  width: 20rem;
-  height: 25rem;
+  width: 15rem;
+  height: 20rem;
   border-radius: 1rem;
   object-fit: cover;
   margin: 0 auto;
   /* border: 1px solid blue; */
 }
 .swiper-fade {
-  width: 20rem;
-  height: 25rem;
+  width: 15rem;
+  height: 20rem;
   border-radius: 1rem;
   object-fit: cover;
   margin: 0 auto;
@@ -114,14 +111,14 @@ body {
   background: linear-gradient(180deg, rgba(247,171,10,1) 0%, rgba(247,171,10,0.768032212885154) 100%);
   opacity: 0.85;
   position: absolute;
-  width: 20rem;
+  width: 15rem;
   height: 0;
   transition: 0.4s ease-in-out;
   border-radius: 1rem;
 }
 .swiper-fade:hover::before {
-  width: 20rem;
-  height: 25rem;
+  width: 15rem;
+  height: 20rem;
   margin: 0 auto;
   /* border: 1px solid blue; */
 }
@@ -192,6 +189,7 @@ body {
 .slider-controler .swiper-button-next {
   left: 58% !important;
   transform: translateX(-58%) !important;
+  
 }
 
 @media (max-width: 990px) {
@@ -229,15 +227,19 @@ body {
 }
 .slider-controler .slider-arrow {
   background: var(--white);
-  height: 5rem;
+  /*border: solid 1px blue*/
   border-radius: 50%;
   left: 42%;
   transform: translateX(-42%);
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  /*border: solid 1px blue;*/
+
 }
 
 .slider-controler .slider-arrow::after {
   color: #F7AB0A;
+  /*border: solid 1px blue;*/
+  
 }
 
 

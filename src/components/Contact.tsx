@@ -27,19 +27,19 @@ export default function Contact({ }: Props) {
 
 
     return (
-        <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row  px-10 justify-evenly mx-auto items-center'>
+        <div className='h-screen relative flex flex-col text-center md:text-left md:flex-row px-10 justify-evenly mx-auto items-center'>
 
-            <h3 className='absolute top-12 uppercase tracking-[20px] text-gray-500 '>
+            <h3 className='absolute top-10 uppercase tracking-[20px] text-gray-500'>
                 Contact
             </h3>
 
             <div className='flex flex-col space-y-10'>
-                <h4 className='text-lg font-semibold text-center'>
+                {/* <h4 className='text-lg font-semibold text-center'>
                 {locale== 'fr'? 'J\'ai ce qu\'il vous faut.' : 'I\'ve got just what you need.'}
                      {""} <span className='underline decoration-[#F7AB0A]/50'>
                      {locale== 'fr'? 'Laissez moi un message' : 'Leave me a message.'}
                         </span>
-                </h4>
+                </h4> */}
 
                 <div >
 
@@ -90,7 +90,7 @@ export default function Contact({ }: Props) {
                     <button
                         className='bg-[#F7AB0A]/50 hover:bg-[#F7AB0A]/80 py-5 px-10 rounded-md text-black font-bold text-lg'
                         type='submit'>
-                            {locale== 'fr'? 'Envoyer' : 'Submit.'}
+                            {locale== 'fr'? 'Envoyer' : 'Submit'}
                         
                     </button>
                 </form>
