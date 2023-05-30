@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Envelope, Facebook, Github, Gitlab, Linkedin, Whatsapp } from '../Svg'
+import { Envelope, Facebook, Github, Gitlab, Linkedin, Whatsapp, File } from '../Svg'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import LanguageSelectDropDown from './LanguageSelectDropDown'
 import { useRouter } from 'next/router'
@@ -24,7 +24,7 @@ export default function Header({ }: Props) {
     return (
         <header
             className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center cursor-pointer '>
-            <nav className='hidden lg:flex lg:flex-col justify-center space-y-4 border'>
+            <nav className='hidden lg:flex lg:flex-col justify-center space-y-4'>
 
 
                 <motion.div
@@ -167,14 +167,20 @@ export default function Header({ }: Props) {
                 }}
                 viewport={{ once: true }}>
 
-                <Link href='#contact'>
-                    <div className='flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A] space-x-2'>
+                <Link href='https://portfolio-yannpezavant.netlify.app/img/YannPezavantCV.pdf' target="_blank">
+                    <div className='flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A] space-x-2 uppercase md:inline-flex text-sm'>
 
-                        <Envelope className="fill-gray-300 hover:fill-[#F7AB0A]" />
-
-                        <p className='uppercase hidden md:inline-flex text-sm'>{locale == 'fr' ? 'Me contacter' : 'Get in touch'}</p>
+                        <File className="fill-gray-300 hover:fill-[#F7AB0A] mr-1" />
+                        {locale== 'fr'? ' Mon CV' : ' My CV'}
+                    
+                        
                     </div>
                 </Link>
+
+
+                
+            
+            
             </motion.div>
         </header>
     )

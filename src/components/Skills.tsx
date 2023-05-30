@@ -2,13 +2,17 @@ import { MotionConfig, motion } from 'framer-motion'
 import React from 'react'
 import Skill from './Skill'
 import { useRouter } from 'next/router';
+import { sanityClient } from '@/sanity';
 
 
-type Props = {}
+type Props = {
+  skill: any;
+}
 
-export default function Skills({}: Props) {
+export default function Skills({skill}: Props) {
   const router = useRouter();
   const {locale}= router;
+  console.log(skill)
   
   return (
     <motion.div  
@@ -23,17 +27,41 @@ export default function Skills({}: Props) {
     </h3>
     
     <div className='grid grid-cols-3 gap-3'>
-    <Skill/>
-    <Skill/>
-    <Skill/>
-    <Skill/>
-    <Skill/>
-    <Skill/>
-    <Skill/>
-    <Skill/>
+
+      {skill?.map((item:any)=>(
+
+        <Skill 
+          key={item?._id} 
+          skill={skill}        
+          />
+      ))}
     </div>
 
     </motion.div>
   )
+}
+
+
+export const getServerSideProps = async () => {
+  const projectQuery = `*[_type == "skill"] {
+    _id,
+    name,
+    image,
+    _createdAt,
+}`
+
+  const skill = await sanityClient.fetch(projectQuery)
+
+  if (!skill) {
+      return {
+          notFound: true
+      }
+  }
+
+  return {
+      props: {
+          skill,
+      },
+  }
 }
 
