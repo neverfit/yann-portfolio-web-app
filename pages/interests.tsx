@@ -9,7 +9,6 @@ interface Props{
 }
 
 function Interests({series}:Props) {
-  console.log(series)
 
   return (
     // <div>{project.map((item: any) => (
@@ -33,9 +32,7 @@ function Interests({series}:Props) {
           </div>
     
     <div
-    className='grid lg:grid-cols-5 gap-4 md:grid-cols-3 sm:grid-cols-2
-    '
-    >
+    className='grid lg:grid-cols-5 gap-4 md:grid-cols-3 sm:grid-cols-2'>
 
         
     

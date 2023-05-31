@@ -110,10 +110,20 @@ export const getServerSideProps = async () => {
     _createdAt,
     slug {
       current
-  }
+  },
+  
 }`
 
+const skillQuery= `*[_type == "skill"] {
+  _id,
+  title,
+  image,
+  _createdAt,
+}`
+
+
 const project = await sanityClient.fetch(projectQuery)
+const skill = await sanityClient.fetch(skillQuery)
 
 if(!project){
   return {
@@ -124,6 +134,7 @@ if(!project){
 return {
   props: {
     project,
+    skill
   }
 }
 }

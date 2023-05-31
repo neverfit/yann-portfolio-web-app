@@ -21,6 +21,7 @@ interface Props {
 export default function Projects2({ project}: Props) {
     const router = useRouter();
     const { locale } = router;
+    
 
     return (
         <div className='container h-screen p-16 mx-auto '>

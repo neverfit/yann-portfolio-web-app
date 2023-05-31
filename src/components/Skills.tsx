@@ -2,7 +2,7 @@ import { MotionConfig, motion } from 'framer-motion'
 import React from 'react'
 import Skill from './Skill'
 import { useRouter } from 'next/router';
-import { sanityClient } from '@/sanity';
+import { sanityClient} from '@/sanity';
 
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 export default function Skills({skill}: Props) {
   const router = useRouter();
   const {locale}= router;
-  console.log(skill)
+  
   
   return (
     <motion.div  
@@ -22,46 +22,44 @@ export default function Skills({skill}: Props) {
 
     className='flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center'>
 
-    <h3 className='absolute top-12 uppercase tracking-[20px] text-gray-500 '>{locale== 'fr'? 'Compétences' : 'Skills'}
-        
+    <h3 className='absolute top-12 uppercase tracking-[20px] text-gray-500 '>{locale== 'fr'? 'Compétences' : 'Skills'}  
     </h3>
     
-    <div className='grid grid-cols-3 gap-3'>
-
-      {skill?.map((item:any)=>(
-
-        <Skill 
-          key={item?._id} 
-          skill={skill}        
-          />
-      ))}
+           
+    <div className='' >
+      {/* {skill?.map((item:any)=>( */}
+        
+        <Skill skill={skill}  />
+        
+        {/* ))} */}
     </div>
+    
 
     </motion.div>
-  )
+  );
 }
 
 
 export const getServerSideProps = async () => {
-  const projectQuery = `*[_type == "skill"] {
+  const skillQuery = `*[_type == "skill"] {
     _id,
-    name,
+    title,
     image,
-    _createdAt,
-}`
+    _createdAt
+  }`;
 
-  const skill = await sanityClient.fetch(projectQuery)
+  const skill = await sanityClient.fetch(skillQuery);
 
   if (!skill) {
-      return {
-          notFound: true
-      }
+    return {
+      notFound: true
+    };
   }
 
   return {
-      props: {
-          skill,
-      },
-  }
-}
+    props: {
+      skill
+    }
+  };
+};
 

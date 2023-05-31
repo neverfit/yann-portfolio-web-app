@@ -168,7 +168,7 @@ export default function Header({ }: Props) {
                 viewport={{ once: true }}>
 
                 <Link href='https://portfolio-yannpezavant.netlify.app/img/YannPezavantCV.pdf' target="_blank">
-                    <div className='flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A] space-x-2 uppercase md:inline-flex text-sm'>
+                    <div className='flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A] space-x-2  md:inline-flex text-sm'>
 
                         <File className="fill-gray-300 hover:fill-[#F7AB0A] mr-1" />
                         {locale== 'fr'? ' Mon CV' : ' My CV'}

@@ -9,7 +9,6 @@ interface Props {
 }
 
 export default function Project ({project}: Props){
-  console.log(project)
 
   const router = useRouter();
   const { locale } = router;
